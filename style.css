@@ -1,0 +1,18 @@
+body{
+    background-color: #f7f7f7;
+    font-size: 15px;
+    font-family: Arial sans-serif;
+    text-align: center;
+    font-weight: bold;
+}
+.product_grid{
+    display: flex;
+    flex-wrap: wrap;
+}
+.product_grid__item{
+    border: solid 0.1em lightgray;
+    border-radius: 10px;
+    padding: 10px 20px 10px 20px;
+    margin: 10px;
+    text-align: center;
+}

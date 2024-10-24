@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <style>
+        table {
+            width: 70%;
+            border: 1px solid black;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Choose your plan</th>
+            <th>starter</th>
+            <th>econom</th>
+            <th>standart</th>
+            <th>proffesional</th>
+        </tr>
+        <tr>
+            <td>Amount of space</td>
+            <td>20 GB</td>
+            <td>40 GB</td>
+            <td>110 GB</td>
+            <td>Unlimited</td>
+        </tr>
+        <tr>
+            <td>Bandwidth</td>
+            <td>120 GB</td>
+            <td>240 GB</td>
+            <td>610 GB</td>
+            <td>1300 GB</td>
+        </tr>
+        <tr>
+            <td>Email account</td>
+            <td>1</td>
+            <td>15</td>
+            <td>60</td>
+            <td>Unlimited</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button>start</button></td>
+            <td><button>start</button></td>
+            <td><button>start</button></td>
+            <td><button>start</button></td>
+        </tr>
+    </table>
+    
+</body>
+</html>

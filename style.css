@@ -1,18 +1,29 @@
 body{
     background-color: #f7f7f7;
-    font-size: 15px;
-    font-family: Arial sans-serif;
-    text-align: center;
-    font-weight: bold;
 }
-.product_grid{
+.menu_vertical{
     display: flex;
-    flex-wrap: wrap;
+    width: 400px;
 }
-.product_grid__item{
-    border: solid 0.1em lightgray;
-    border-radius: 10px;
-    padding: 10px 20px 10px 20px;
-    margin: 10px;
-    text-align: center;
+span{
+    color: white;
+    padding: 0 50px 0 0;
+    font-size: 13px;
+    font-family: Calibri, sans-serif;
+}
+img{
+    width: 50px;
+    padding: 0 10px 0 10px;
+}
+.li_img{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+li{
+    list-style: none;
+    background: darkgrey;
+}
+li:hover{
+    background: grey;
 }

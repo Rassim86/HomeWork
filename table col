@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <style>
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+        .col-1 {
+            background-color: beige;
+        }
+        .col-2 {
+            background-color: lightblue;
+        }
+        .col-3 {
+            background-color: lightgreen;
+        }
+        .col-4 {
+            background-color: lightyellow;
+        }
+        .col-5 {
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <colgroup>
+            <col span="1" class="col-1">
+            <col class="col-2">
+            <col class="col-3">
+            <col class="col-4">
+            <col class="col-5">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>specification</th>
+                <th>free</th>
+                <th>basic</th>
+                <th>standart</th>
+                <th>premium</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>ratione deserunt mode</th>
+                <th>+</th>
+                <th>+</th>
+                <th>+</th>
+                <th>+</th>
+            </tr>
+            <tr>
+                <th>vel maiores odeo</th>
+                <th>+</th>
+                <th>+</th>
+                <th>+</th>
+                <th>+</th>
+            </tr>
+            <tr>
+                <th>minus vel aperian natus</th>
+                <th>+</th>
+                <th>+</th>
+                <th>+</th>
+                <th>+</th>
+            </tr>
+            <tr>
+                <th>provid minima sapiente</th>
+                <th>+</th>
+                <th>+</th>
+                <th>+</th>
+                <th>+</th>
+            </tr>
+            <tr>
+                <th>eveniet eaque excepture</th>
+                <th>+</th>
+                <th>+</th>
+                <th>+</th>
+                <th>+</th>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>price</th>

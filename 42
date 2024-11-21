@@ -1,0 +1,66 @@
+interface IFlying {
+  canFly: true;
+}
+
+interface IBird extends IFlying {
+  isLiving: true;
+}
+
+interface IPlane extends IFlying {
+  canCarryPeople: true;
+}
+
+// BEGIN
+interface ISuperman extends
+  IBird, IPlane {
+  guessWho: (guess: string) => string;
+}
+
+const superMan: ISuperman = {
+  canFly: true,
+  isLiving: true,
+  canCarryPeople: true,
+  guessWho: (guess) => (guess.toLowerCase() !== 'superman' ? `It's a ${guess}?` : `It's a ${guess}!`),
+};
+// END
+
+export default superMan;
+Ваше решение:
+interface IFlying {
+  canFly: true;
+}
+
+interface IBird extends IFlying {
+  isLiving: true;
+}
+
+interface IPlane extends IFlying {
+  canCarryPeople: true;
+}
+
+// BEGIN (write your solution here)
+interface ISuperMan {
+    String guessWho(String value);
+}
+
+class SuperMan implements ISuperMan {
+    Override
+    public String guessWho(String value) {
+        if (value.equalsIgnoreCase("superman")) {
+            return "It's a " + value + "!";
+        } else {
+            return "It's a " + value + "?";
+        }
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        ISuperMan superMan = new SuperMan();
+        System.out.println(SuperMan.guessWho("Superman"));
+        System.out.println(SuperMan.guessWho("batman")); 
+        System.out.println(SuperMan.guessWho("Wonder Woman")); 
+    }
+}
+// END
+
+export default superMan;

@@ -1,0 +1,163 @@
+Ввод имени пользователя
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Ввод имени</title>
+</head>
+<body>
+    <input type="text" id="username" placeholder="Введите имя" oninput="validateInput()">
+    <script>
+        function validateInput() {
+            const input = document.getElementById('username');
+            input.value = input.value.replace(/[0-9]/g, ''); // Удаляем цифры
+        }
+    </script>
+</body>
+</html>
+
+
+Задание 2: Модальное окно
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Модальное окно</title>
+    <style>
+        #modal { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding: 20px; border: 1px solid black; }
+    </style>
+</head>
+<body>
+    <button id="openBtn">Открыть</button>
+    <div id="modal">
+        <p>Это модальное окно</p>
+        <button onclick="closeModal()">Закрыть</button>
+    </div>
+    <script>
+        document.getElementById('openBtn').onclick = function() {
+            document.getElementById('modal').style.display = 'block';
+        };
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
+
+
+Задание 3: Футбольное поле
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Футбольное поле</title>
+    <style>
+        body, html { margin: 0; height: 100%; }
+        #field { background: green; width: 100%; height: 100%; position: relative; }
+        #ball { width: 100px; height: 100px; background: white; border-radius: 50%; position: absolute; }
+    </style>
+</head>
+<body>
+    <div id="field" onclick="moveBall(event)">
+        <div id="ball"></div>
+    </div>
+    <script>
+        function moveBall(event) {
+            const ball = document.getElementById('ball');
+            const field = document.getElementById('field');
+            const rect = field.getBoundingClientRect();
+            const x = event.clientX - rect.left - 50; // Центр мяча
+            const y = event.clientY - rect.top - 50; // Центр мяча
+            ball.style.transform = `translate(${Math.max(0, Math.min(x, rect.width - 100))}px, ${Math.max(0, Math.min(y, rect.height - 100))}px)`;
+        }
+    </script>
+</body>
+</html>
+
+
+Задание 4: Светофор
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Светофор</title>
+    <style>
+        #trafficLight { width: 100px; height: 300px; background: black; }
+        .light { width: 100%; height: 100px; opacity: 0.3; }
+    </style>
+</head>
+<body>
+    <div id="trafficLight">
+        <div class="light" id="red" style="background: red;"></div>
+        <div class="light" id="yellow" style="background: yellow;"></div>
+        <div class="light" id="green" style="background: green;"></div>
+    </div>
+    <button onclick="changeLight()">Переключить</button>
+    <script>
+        let currentLight = 0; // 0 - красный, 1 - желтый, 2 - зеленый
+        function changeLight() {
+            const lights = [document.getElementById('red'), document.getElementById('yellow'), document.getElementById('green')];
+            lights[currentLight].style.opacity = 0.3; // Выключаем текущий свет
+            currentLight = (currentLight + 1) % 3; // Переход к следующему
+            lights[currentLight].style.opacity = 1; // Включаем следующий свет
+        }
+    </script>
+</body>
+</html>
+
+
+Задание 5: Список книг
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Список книг</title>
+    <style>
+        .book { cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="book" onclick="changeColor(this)">Книга 1</div>
+    <div class="book" onclick="changeColor(this)">Книга 2</div>
+    <div class="book" onclick="changeColor(this)">Книга 3</div>
+    <script>
+        function changeColor(element) {
+            element.style.backgroundColor = element.style.backgroundColor === 'orange' ? '' : 'orange';
+        }
+    </script>
+</body>
+</html>
+
+
+Задание 6: Кнопки с подсказками
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Кнопки с подсказками</title>
+    <style>
+        .tooltip { display: none; position: absolute; background: lightgray; padding: 5px; }
+    </style>
+</head>
+<body>
+    <button onmouseover="showTooltip(event)" onmouseout="hideTooltip(event)">Кнопка 1</button>
+    <div class="tooltip" id="tooltip">Подсказка</div>
+    <script>
+        function showTooltip(event) {
+            const tooltip = document.getElementById('tooltip');
+            tooltip.style.display = 'block';
+            tooltip.style.top = event.target.getBoundingClientRect().top - tooltip.offsetHeight + 'px';
+            tooltip.style.left = event.target.getBoundingClientRect().left + 'px';
+        }
+        function hideTooltip(event) {
+            document.getElementById('tooltip').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
